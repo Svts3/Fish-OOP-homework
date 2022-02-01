@@ -71,13 +71,11 @@ class FishShop:
             self.fresh_fish_boxes[name][1] -= weight
             if self.fresh_fish_boxes[name][1] <= 0.0:
                 self.fresh_fish_boxes.pop(name)
-                return [name, weight]
 
         if is_fresh == False and name in self.frozen_fish_boxes:
             if self.frozen_fish_boxes[name][1] <= 0.0:
                 self.frozen_fish_boxes.pop(name)
             self.frozen_fish_boxes[name][1] -= weight
-            return [name, weight]
 
     def get_fish_sorted_by_price(self) -> None:
         sorted_fish_box = {}
